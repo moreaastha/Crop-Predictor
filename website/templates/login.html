@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="form-container">
+    <div id="loginForm">
+      <h2>Login</h2>
+      
+      <form method="POST" action="{{ url_for('main.login') }}">
+          {{ form.hidden_tag() }} 
+          
+          <div class="form-group">
+              {{ form.email.label }} 
+              {{ form.email(class="form-control", placeholder="Email") }}
+          </div>
+
+          <div class="form-group">
+              {{ form.password.label }} 
+              {{ form.password(class="form-control", placeholder="Password") }}
+          </div>
+
+          <div class="form-group">
+              {{ form.remember() }}
+              {{ form.remember.label }}
+          </div>
+
+          <button type="submit" class="button">Login</button>
+      </form>
+      
+      <div class="toggle">
+          <p>Don't have an account? <a href="{{ url_for('main.register') }}">Register here</a></p>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

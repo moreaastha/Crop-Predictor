@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="knowYourSoil">
+    <h1 style="text-align: center;">Know Your Soil</h1>
+    <form id="soilForm">
+      <p style="text-align: center;">Select the characteristics of your soil:</p> <br>
+
+      <label> <h5>Soil Texture:</h5> 
+        <input type="checkbox" id="sand" name="texture" value="Sand"> Sand <br>
+        <input type="checkbox" id="clay" name="texture" value="Clay"> Clay <br>
+        <input type="checkbox" id="silt" name="texture" value="Silt"> Silt 
+      </label>
+        
+      <label> <h5>Soil Drainage:</h5>
+        <input type="radio" id="wellDrained" name="drainage" value="Well-Drained"> Well-Drained <br>
+        <input type="radio" id="mediocreDrained" name="drainage" value="Average-Drained"> Average-Drained <br>
+        <input type="radio" id="poorlyDrained" name="drainage" value="Poorly Drained"> Poorly Drained 
+      </label>
+
+      <label> <h5>Soil Color:</h5> 
+        <input type="radio" id="darkColor" name="color" value="Dark"> Dark <br>
+        <input type="radio" id="avgColor" name="color" value="Average"> Average <br>
+        <input type="radio" id="lightColor" name="color" value="Light"> Light 
+      </label>
+
+      <br>
+
+      <button type="button" class="btn">Find My Soil Type</button>
+    </form>
+  </div>
+
+{% endblock content %}

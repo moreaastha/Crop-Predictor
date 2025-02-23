@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="result-container">
+    <h4 style="text-align: center;">Predicted Crop:</h4>
+    <h2 style="text-align: center;">"{{ crop }}"</h2>
+    <br>
+
+    <p style="text-align: center;">Go back <a href="{{ url_for('main.predict_crop') }}">predict</a></p>
+    </a>
+</div>
+
+{% endblock content %}

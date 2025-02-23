@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="container">
+    <h1>Prediction Result</h1>
+    <p>The best crop to harvest is: <strong>{{ crop }}</strong></p>
+    <a href="{{ url_for('main.predict_crop') }}">Predict Again</a>  
+
+{% endblock content %}
